@@ -14,6 +14,7 @@ public class UnFairLock implements Runnable {
 
     @Override
     public void run() {
+        System.out.println(index+"tryLock");
         reentrantLock.lock();
         System.out.println(index+"locked");
         try {

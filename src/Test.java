@@ -30,7 +30,9 @@ public class Test {
             executor.execute(unFairLock);
         }
         try {
+            //保持锁为了让其他线程阻塞形成node阻塞队列
             Thread.sleep(2000);
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
